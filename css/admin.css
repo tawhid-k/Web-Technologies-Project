@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+.side-bar {
+	float: left;
+	width: 25%;
+	height: 100%;
+	background-color: #824848;
+	position: relative;
+}
+.side-bar h2 {
+	border: 3px dotted white;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-top: 30px;
+	margin-right: 5px;
+	font-size: 80px;
+	color: white;
+}
+.side-bar .button-collection {
+	margin-top: 80px;
+	margin-left: 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 20px;
+}
+.side-bar .button input[type="submit"] {
+    border: 2px solid white;
+    background-color: #824848;
+    width: 340px;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+}
+.side-bar .button input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+.main-bar {
+	float: right;
+	background-color: white;
+	height: 100%;
+	width: 75%;
+}
+.main-bar .button-collection {
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 600px;
+	width: 800px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 30px;
+}
+.main-bar .button-collection input[type="submit"] {
+	width: 800px;
+	height: 100px;
+	border: none;
+	font-size: 50px;
+	color: white;
+	border-radius: 60px;
+}
+.main-bar .button-collection input[type="submit"]:hover {
+	height: 120px;
+	width: 820px;
+}
+.main-bar .button-collection .button1 input[type="submit"] {
+	background-color: #1A626B;
+}
+.main-bar .button-collection .button2 input[type="submit"] {
+    background-color: #8277A3;
+}
+.main-bar .button-collection .button3 input[type="submit"] {
+    background-color: #E35B5B;
+}
+.main-bar .button-collection .button4 input[type="submit"] {
+    background-color: #61D882;
+}

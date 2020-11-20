@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  border: 0;
+}
+h1 {
+  font-family: "Comic Sans MS";
+  color: white;
+  font-size: 100px;
+}
+body {
+	/*background-image: linear-gradient(to right, #620A59, #FC8EFF, #FC8EFF, #FC8EFF, #620A59);*/
+	background-color: white;
+}
+input {
+  margin-bottom: 50px;
+}
+input[type="text"], input[type="Password"] {
+  border: none;
+  background-color: white;
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  outline: none;
+}
+input::placeholder {
+	font-size: 20px;
+}
+input[type="submit"] {
+  margin-bottom: 30px;
+  width: 350px;
+  height: 40px;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  background-color: #4C2462;
+  outline: none;
+}
+input[type="submit"]:hover{
+  background-color: red;
+}
+.table {
+  margin-top: 5%;
+  height: 60%;
+  width: 30%;
+  background-color: #8247A3;
+  position: relative;
+}
