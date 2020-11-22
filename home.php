@@ -12,6 +12,12 @@
      setcookie("username", "", time() - 10);
      header("Location: home.php");
    }
+   if (isset($_POST["contact"])) {
+     header("Location: contact.php");
+   }
+   if (isset($_POST["travel_agencies"])) {
+     header("Location: agencies.php");
+   }
 ?>
 <html>
 <head>

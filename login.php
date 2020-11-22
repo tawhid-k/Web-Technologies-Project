@@ -13,7 +13,10 @@
    	  	$hasError = true;
    	  }
    	  else $value_pass = $_POST["pass"];
-   	  if (!$hasError) {
+   	  if (!$hasError && $value_uname == "admin" && $value_pass == "admin") {
+        header("Location: admin.php");
+      }
+      else if (!$hasError) {
    	  	setcookie("username", $_POST["uname"], time() + 3600);
    	  	header("Location: home.php");
    	  }

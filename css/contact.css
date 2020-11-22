@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+table {
+	padding: 20px 40px;
+}
+label {
+	font-size: 25px;
+	color: #610C6B;
+	font-family: serif;
+}
+a {
+	font-size: 25px;
+}
+.whole {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	/*display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 5px;*/
+}
+.box {
+	width: 80%;
+	height: 25%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid #74287D;
+}

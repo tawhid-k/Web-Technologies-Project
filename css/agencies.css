@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(../root/agency.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.list-box {
+	margin-top: 100px;
+    width: 50%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    opacity: 0.6;
+}
+table {
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-size: 20px;
+}
