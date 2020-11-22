@@ -171,10 +171,13 @@
   text-align: justify;
   text-align-last: center;
 }
-.pack:hover {
-  opacity: 0.5;
+.pack .img1:hover,.img2:hover,.img3:hover,.img4:hover,.img5:hover,.img6:hover {
+  opacity: 0.4;
 }
 .pack a {
    font-size: 20px;
    font-style: italic;
+}
+.pack a:hover {
+   color: red;
 }

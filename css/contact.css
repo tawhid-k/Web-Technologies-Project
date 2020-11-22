@@ -2,6 +2,16 @@
 	margin: 0;
 	padding: 0;
 }
+h1 {
+	background-color: #FAEFF9;
+	font-size: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #780172;
+}
+body {
+	background-color: #FCF7FB;
+}
 table {
 	padding: 20px 40px;
 }

@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #FFFCDD;
+}
+table {
+	padding-top: 0px;
+	padding-left: 50px;
+	font-size: 20px;
+}
+td {
+	padding-top: 10px;
+	text-align: normal;
+	border: 10px solid #FFFCDD;
+}
+.image {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1400px;
+	height: 500px;
+	border: 5px solid red;
+	background-image: url(../root/hotelRoom.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+input {
+	margin-right: 30px;
+	height: 30px;
+	width: 60px;
+	background-color: #069F13 ;
+	color: white;
+	border: none;
+}
+input:hover {
+	background-color: red;
+}
+.description {
+	width: 1400px;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	border: 3px dotted black;
+}

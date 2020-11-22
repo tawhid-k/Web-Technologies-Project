@@ -5,7 +5,8 @@
 </head>
 <body>
     <div class="Whole">
-    	<div class="box">
+    	<h1 align="center">Admins</h1>
+        <div class="box">
     		<table>
     			<tr>
     				<td>

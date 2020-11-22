@@ -63,19 +63,19 @@
                 <div class="pack">
                     <div class="img1"></div>
                         <div class="align-text">
-                          <a href="">Sylhet Tourist Places - Where To Go And What To Do..</a>
+                          <a href="ShowPlace.php">Sylhet Tourist Places - Where To Go And What To Do..</a>
                         </div>
                 </div>
                 <div class="pack">
                     <div class="img2"></div>
                         <div class="align-text">
-                          <a href="">Teknaf Sea Beach - Best Places To Visit In Bangladesh In This Winder..</a>
+                          <a href="ShowPlace.php">Teknaf Sea Beach - Best Places To Visit In Bangladesh In This Winder..</a>
                         </div>
                 </div>
                 <div class="pack">
                     <div class="img3"></div>
                         <div class="align-text">    
-                          <a href="">Kuakata Sea Beach - Enormous Experience With Sea Beach And Local Traditions..</a>
+                          <a href="ShowPlace.php">Kuakata Sea Beach - Enormous Experience With Sea Beach And Local Traditions..</a>
                         </div>
                 </div>
                 <div class="pack">
@@ -87,13 +87,13 @@
                 <div class="pack">
                     <div class="img5"></div>
                         <div class="align-text">    
-                            <a href="">Bandarban - Have the most unique ever experience in Bamgladesh..</a>
+                            <a href="ShowPlace.php">Bandarban - Have the most unique ever experience in Bamgladesh..</a>
                         </div>
                 </div>
                 <div class="pack">
                     <div class="img6"></div>
                         <div class="align-text">    
-                            <a href="">Rangamati - Discover Cultural Diversities And Beautiful Places..</a>
+                            <a href="ShowPlace.php">Rangamati - Discover Cultural Diversities And Beautiful Places..</a>
                         </div>
                 </div>
             </div>

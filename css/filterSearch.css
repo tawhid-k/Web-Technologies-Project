@@ -3,6 +3,9 @@
 	margin: 0;
   user-select: none;
 }
+body {
+  background-color: #F9E7F5;
+}
 h1 {
   user-select: none;
   padding-top: 20px;
