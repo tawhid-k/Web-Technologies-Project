@@ -10,7 +10,7 @@
        $err_agencyname = "required*";
    	 }
    	 else setcookie("username", $_POST["agency_name"], time() + 3600);
-   	 else for ($i = 0; $i < strlen($_POST["agency_name"]); $i++) {
+   	 for ($i = 0; $i < strlen($_POST["agency_name"]); $i++) {
    	   if ($_POST["agency_name"][$i] >= '0' && $_POST["agency_name"][$i] <= '9') {
    	   	 $err_agencyname = "No numeric vales in Agency Name*";
    	   }
