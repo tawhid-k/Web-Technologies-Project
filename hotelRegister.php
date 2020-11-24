@@ -8,6 +8,7 @@
    	 if (empty($_POST["f_name"])) {
        $err_fname = "required*";
    	 }
+       else setcookie("username", $_POST["f_name"], time() + 3600);
    	 else for ($i = 0; $i < strlen($_POST["f_name"]); $i++) {
    	   if ($_POST["f_name"][$i] >= '0' && $_POST["f_name"][$i] <= '9') {
    	   	 $err_fname = "No numeric vales in name*";
@@ -79,11 +80,6 @@
 	           	  	 <input type="password" name="cpass" placeholder="<?php echo($err_cpass); ?>">
 	           	  </div>
 	           	  <input type="submit" name="submit" value="Register">
-                 <?php
-                    if (isset($_POST["submit"])) {
-                    header("Location: hSpec.php");
-                  }
-                 ?>
 	           </div>
 	        </div>
 		</form>
