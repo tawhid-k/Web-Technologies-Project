@@ -6,7 +6,7 @@
      header("Location: filterSearch.php");
    }
    if (isset($_POST["signup"])) {
-     header("Location: signup.php");
+     header("Location: signup_as.php");
    }
    if (isset($_POST["logout"])) {
      setcookie("username", "", time() - 10);
