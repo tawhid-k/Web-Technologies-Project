@@ -32,11 +32,11 @@ body {
    display: grid;
    padding-left: 80px;
    grid-template-columns: 1fr;
-   grid-row-gap: 50px;
+   grid-row-gap: 40px;
 }
 .second-part h1 {
    padding-top: 15px;
-   font-size: 70px;
+   font-size: 60px;
    color: #5B1981;
 }
 .components {
@@ -46,13 +46,13 @@ body {
 .second-part input[type="submit"] {
    background-color: #581B7B;
    border: none;
-   font-size: 45px;
+   font-size: 30px;
    font-family: serif;
    text-transform: uppercase;
-   width: 300px;
-   height: 60px;
+   width: 160px;
+   height: 50px;
    color: white;
-   margin-left: 200px;
+   margin-left: 340px;
 }
 .components input{
    font-size: 20px;

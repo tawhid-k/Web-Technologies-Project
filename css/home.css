@@ -80,8 +80,6 @@
 }
 .search_items input[type="text"] {
   background-color: #D1CFD9;
-  /*background-color: white;
-  box-shadow: 2px 2px 4px #000000;*/
   padding-left: 20px;
   outline: none;
   border: none;
@@ -128,41 +126,10 @@
   grid-column-gap: 5em;
   grid-row-gap: 2em;
 }
-.pack .img1 {
+.pack .img {
    width: 600px;
    height: 400px;
-   background-image: url(../root/v1.jpg);
-   background-size: 100%;
-}
-.pack .img2 {
-   width: 600px;
-   height: 400px;
-   background-image: url(../root/v2.jpg);
-   background-size: 100%;
-}
-.pack .img3 {
-   width: 600px;
-   height: 400px;
-   background-image: url(../root/v3.jpg);
    background-size: cover;
-}
-.pack .img4 {
-   width: 600px;
-   height: 400px;
-   background-image: url(../root/v4.jpg);
-   background-size: 100%;
-}
-.pack .img5 {
-   width: 600px;
-   height: 400px;
-   background-image: url(../root/v5.jpg);
-   background-size: cover;
-}
-.pack .img6 {
-   width: 600px;
-   height: 400px;
-   background-image: url(../root/v6.jpg);
-   background-size: 100%;
 }
 .align-text {
   width: 600px;

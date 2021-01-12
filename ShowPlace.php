@@ -6,56 +6,76 @@
 <body>
     <div class="image"></div>
     <div class="description">
-    	<table>
-    		<tr>
-    			<td>
-    				<label>Place:</label>
-    			</td>
-    			<td>
-    				<label>Srimangal, Sylhet</label>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>
-    				<label>Tourist Attractions:</label>
-    			</td>
-    			<td>
-    				<a href="">Bisnakandi, Ratargul Swamp Forest, Jaflong, Khadimnagar National Park</a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>
-    				<label>Hotels:</label>
-    			</td>
-    			<td>
-    				<a href="hotel.php">Bottomhill Palace Hotel, Hotel Supreme, Hotel Dallas sylhet</a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>
-    				Tourist Guide:
-    			</td>
-    			<td>
-    				Yes
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>
-    				<label>Cost per person:</label>
-    			</td>
-    			<td>
-    				<label>5000 - 15,000</label>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>
-    				<label>Description: &nbsp &nbsp &nbsp &nbsp</label>
-    			</td>
-    			<td>
-    				<label>Sylhet (Bengali: সিলেট, Sylheti:) is a metropolitan city in northeastern Bangladesh. It is the administrative seat of Sylhet Division. The city is located on the right bank of the Surma River in northeastern Bengal. It has a subtropical climate and lush highland terrain. The city has a population of more than half a million.[1] Sylhet is one of Bangladesh's most important spiritual and cultural centres. It is one of the most important cities of Bangladesh, after Dhaka and Chittagong due to its importance to the country's economy. Sylhet produces the highest amount of tea and gas in the country. In 1303, the Sultan of Lakhnauti Shamsuddin Firoz Shah conquered Sylhet by defeating Gour Govinda.[4] Sylhet was a realm of the Bengal Sultanate. In the 16th-century, Sylhet was controlled by the Baro-Bhuyan zamindars and later became a sarkar (district) of the Mughal Empire.[5] Sylhet emerged as the Mughals' most significant imperial outpost in the east and its importance remained as such throughout the seventeenth century.[6] British rule began in the 18th century under the administration of the East India Company. With its ancient seafaring tradition, Sylhet became a key source of lascars in the British Empire.</label>
-    			</td>
-    		</tr>
-    	</table>
+        <?php 
+           require_once 'php/home_clicks.php';
+           $package = $_GET["package_no"];
+           $data = get_package_info($package);
+           $agency = get_agency_name($data);
+           $hotel = get_hotel_name($data);
+           $cost = cost_per_person($data);
+           echo '
+                <style>
+                   .image { background-image: url('.$data[0]["img"].'); }
+                </style>
+                <table>
+                    <tr>
+                        <td>
+                            <label>Agency name:</label>
+                        </td>
+                        <td>
+                            <label>'.$agency.'</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Tourist Attractions:</label>
+                        </td>
+                        <td>
+                            <label> '.$data[0]["spots"].'</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Hotels:</label>
+                        </td>
+                        <td>
+                            <a href="hotel.php?h_uname='.$data[0]["hotel_name"].'">'.$hotel.'</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tourist Guide:
+                        </td>
+                        <td>
+                            Yes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Cost per person:</label>
+                        </td>
+                        <td>
+                            <label>'.$cost.'</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Description: &nbsp &nbsp &nbsp &nbsp</label>
+                        </td>
+                        <td>
+                            <label> '.$data[0]["des"].' </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <input type="submit" name="book" value="Book">
+                        </td>
+                    </tr>
+                </table>
+
+           ';
+        ?>
+    	
     </div>
 </body>
 </html>

@@ -1,24 +1,4 @@
-<?php
-   if (isset($_POST["login"])) {
-     header("Location: login.php");
-   }
-   if (isset($_POST["filter_search"])) {
-     header("Location: filterSearch.php");
-   }
-   if (isset($_POST["signup"])) {
-     header("Location: signup_as.php");
-   }
-   if (isset($_POST["logout"])) {
-     setcookie("username", "", time() - 10);
-     header("Location: home.php");
-   }
-   if (isset($_POST["contact"])) {
-     header("Location: contact.php");
-   }
-   if (isset($_POST["travel_agencies"])) {
-     header("Location: agencies.php");
-   }
-?>
+<?php require "php/home_clicks.php" ?>
 <html>
 <head>
 	<title>Home</title>
@@ -50,53 +30,32 @@
                    else {
                      echo'<div class="welcome-user">
                         <label style="font-size=5px; color: #EEEEEE;">'; echo $uname; echo '</label>
+                        <input type="submit" name="profile" value="profile">
                         <input type="submit" name="logout" value="logout">
                      </div>';
                    } 
                  ?>
             </div>
             <div class="search_items">
-                <input type="text" name="sBox" placeholder="Search for your destination">
+                <input type="text" name="sBox" placeholder="Search for your destination" onkeyup="searchLocation(this)">
                 <input type="submit" name="sButton" value="search">
             </div>
-            <div class="container">
-                <div class="pack">
-                    <div class="img1"></div>
-                        <div class="align-text">
-                          <a href="ShowPlace.php">Sylhet Tourist Places - Where To Go And What To Do..</a>
-                        </div>
-                </div>
-                <div class="pack">
-                    <div class="img2"></div>
-                        <div class="align-text">
-                          <a href="ShowPlace.php">Teknaf Sea Beach - Best Places To Visit In Bangladesh In This Winder..</a>
-                        </div>
-                </div>
-                <div class="pack">
-                    <div class="img3"></div>
-                        <div class="align-text">    
-                          <a href="ShowPlace.php">Kuakata Sea Beach - Enormous Experience With Sea Beach And Local Traditions..</a>
-                        </div>
-                </div>
-                <div class="pack">
-                    <div class="img4"></div>
-                        <div class="align-text">    
-                            <a href="">Rangamati - Discover Cultural Diversities And Beautiful Places..</a>
-                        </div>
-                </div>
-                <div class="pack">
-                    <div class="img5"></div>
-                        <div class="align-text">    
-                            <a href="ShowPlace.php">Bandarban - Have the most unique ever experience in Bamgladesh..</a>
-                        </div>
-                </div>
-                <div class="pack">
-                    <div class="img6"></div>
-                        <div class="align-text">    
-                            <a href="ShowPlace.php">Rangamati - Discover Cultural Diversities And Beautiful Places..</a>
-                        </div>
-                </div>
+            <div class="container" id="container">
+                <?php 
+                   $package = get_packages();
+                   foreach ($package as $i) {
+                       echo '
+                            <div class="pack">
+                                <div class="img" style="background-image: url('.$i["img"].');"></div>
+                                    <div class="align-text">
+                                      <a href="ShowPlace.php?package_no='.$i["package_no"].'">'.$i["location"].'</a>
+                                    </div>
+                            </div>
+                       ';
+                   }
+                ?>
             </div>
         </form>
+        <script src="home_search_location.js"></script>
     </body>
 </html>

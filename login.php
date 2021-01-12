@@ -1,27 +1,4 @@
-<?php
-   $hasError = false;
-   $placeholder_uname = "Username";
-   $placeholder_pass = "Password";
-   $value_uname = "";
-   $value_pass = "";
-   if (isset($_POST["login"])) {
-   	  if (empty($_POST["uname"])) {
-   	  	$hasError = true;
-   	  }
-   	  else $value_uname = $_POST["uname"];
-   	  if (empty($_POST["pass"])) {
-   	  	$hasError = true;
-   	  }
-   	  else $value_pass = $_POST["pass"];
-   	  if (!$hasError && $value_uname == "admin" && $value_pass == "admin") {
-        header("Location: admin.php");
-      }
-      else if (!$hasError) {
-   	  	setcookie("username", $_POST["uname"], time() + 3600);
-   	  	header("Location: home.php");
-   	  }
-   }
-?>
+<?php require "php/login_validation.php" ?>
 <html>
 <head>
 	<title>Login</title>

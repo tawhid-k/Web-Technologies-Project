@@ -1,24 +1,4 @@
-<?php
-   $err_msg = array_fill(0, 4, "");
-   function check_error ($index, $value) {
-   	 global $err_msg;
-   	 if (empty($_POST[$index])) {
-   	   $err_msg[$value] = "&nbsprequired*";
-   	 }
-   	 else if (($index == "days" || $index == "people") && !is_numeric($_POST["$index"])) {
-       $err_msg[$value] = "[The field must contain a numeric value]";
-   	 }
-   }
-   if (isset($_POST["submit"])) {
-   	 check_error("type", 0);
-     check_error("days", 1);
-     check_error("people", 2);
-     if (!isset($_POST["guide"])) {
-       $err_msg[3] = "required*";
-     }
-   }
-?>
-
+<?php require "php/filterSearch_validation.php" ?>
 <html>
 <head>
 	<title>
@@ -123,7 +103,7 @@
 				<tr>
 					<td>
 						From &nbsp
-						<select style="width: 135px">
+						<select name="min_b" style="width: 135px">
 							<option disabled="disabled" selected="selected"> 30, 000 BDT </option>
 							<?php
                               for ($i = 5000; $i <= 100000; $i += 5000) {
@@ -132,7 +112,7 @@
 							?>
 						</select>
 						&nbsp To &nbsp 
-						<select style="width: 135px">
+						<select name="max_b" style="width: 135px">
 							<option disabled="disabled" selected="selected"> 30, 000 BDT </option>
 							<?php
                               for ($i = 5000; $i <= 100000; $i += 5000) {
